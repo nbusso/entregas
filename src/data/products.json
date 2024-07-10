@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "title": "Cleaner 1",
+    "description": "description Cleaner 1",
+    "code": "CNR-1",
+    "price": 10,
+    "status": true,
+    "stock": 1000,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 2,
+    "title": "Cleaner 2",
+    "description": "description Cleaner 2",
+    "code": "CNR-2",
+    "price": 102,
+    "status": true,
+    "stock": 1200,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 3,
+    "title": "Cleaner 3",
+    "description": "description Cleaner 3",
+    "code": "CNR-3",
+    "price": 103,
+    "status": true,
+    "stock": 1300,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 4,
+    "title": "New Cleaner",
+    "description": "Description New cleaner",
+    "code": "CNR-4",
+    "price": 260,
+    "status": true,
+    "stock": 2500,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 5,
+    "title": "Cleaner 5",
+    "description": "description Cleaner 5",
+    "code": "CNR-5",
+    "price": 105,
+    "status": true,
+    "stock": 1500,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 6,
+    "title": "Cleaner 6",
+    "description": "description Cleaner 6",
+    "code": "CNR-6",
+    "price": 106,
+    "status": true,
+    "stock": 1600,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 7,
+    "title": "Cleaner 7",
+    "description": "Description Cleaner X",
+    "code": "CNR-X",
+    "price": 100,
+    "status": true,
+    "stock": 1000,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 8,
+    "title": "Cleaner X1",
+    "description": "Description Cleaner X",
+    "code": "CNR-X",
+    "price": 0,
+    "status": true,
+    "stock": 1000,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 9,
+    "title": "Cleaner X1",
+    "description": "Description Cleaner X",
+    "code": "CNR-X",
+    "price": 10,
+    "status": true,
+    "stock": 1000,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 10,
+    "title": "tesdfgsdfgsdfghshfdgheasdasde",
+    "description": "Description Cleaner X",
+    "code": "CNR-X",
+    "price": 10,
+    "status": true,
+    "stock": 1000,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 11,
+    "title": "Cleaner X1",
+    "description": "Description Cleaner X",
+    "code": "CNR-X",
+    "price": 10,
+    "status": true,
+    "stock": 1000,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
+    "id": 12,
+    "title": "Probando",
+    "description": "Tengo muchas ganas de terminar esta entrega",
+    "code": "TRMNR-2",
+    "price": 50000000,
+    "status": true,
+    "stock": 10,
+    "category": "Vida",
+    "thumbnails": ""
+  },
+  {
+    "id": 13,
+    "title": "Probando",
+    "description": "Tengo muchas ganas de terminar esta entrega",
+    "code": "TRMNR-2",
+    "price": 50000000,
+    "status": true,
+    "stock": 0,
+    "category": "Vida",
+    "thumbnails": ""
+  },
+  {
+    "id": 14,
+    "title": "Probando",
+    "description": "Tengo muchas ganas de terminar esta entrega",
+    "code": "TRMNR-2",
+    "price": 50000000,
+    "status": true,
+    "stock": 0,
+    "category": "Vida",
+    "thumbnails": ""
+  },
+  {
+    "id": 15,
+    "title": "Probando",
+    "description": "Tengo muchas ganas de terminar esta entrega",
+    "code": "TRMNR-2",
+    "price": 50000000,
+    "status": true,
+    "category": "Vida",
+    "thumbnails": ""
+  },
+  {
+    "id": 16,
+    "title": "Probando",
+    "description": "Tengo muchas ganas de terminar esta entrega",
+    "code": "TRMNR-2",
+    "price": 50000000,
+    "status": true,
+    "category": "Vida",
+    "thumbnails": ""
+  },
+  {
+    "id": 17,
+    "description": "Tengo muchas ganas de terminar esta entrega",
+    "code": "TRMNR-2",
+    "price": 50000000,
+    "status": true,
+    "stock": 0,
+    "category": "Vida",
+    "thumbnails": ""
+  },
+  {
+    "id": 18,
+    "title": "Probando",
+    "description": "Tengo muchas ganas de terminar esta entrega",
+    "code": "TRMNR-2",
+    "price": 50000000,
+    "status": true,
+    "stock": 10,
+    "category": "Vida",
+    "thumbnails": ""
+  }
+]
