@@ -8,7 +8,13 @@ let products = setProducts();
 
 // get
 router.get("/", (req, res) => {
-  res.status(200).json(products);
+  const limit = req.query.limit;
+
+  if (limit) {
+    res.status(200).json(products.slice(0, limit));
+  } else {
+    res.status(200).json(products);
+  }
 });
 
 router.get("/:pid", (req, res) => {
