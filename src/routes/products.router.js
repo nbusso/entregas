@@ -101,7 +101,6 @@ router.put("/:pid", (req, res) => {
     res.status(400).json({
       message: "Producto no encontrado",
     });
-    console.log(product);
   }
 });
 
@@ -109,6 +108,7 @@ router.put("/:pid", (req, res) => {
 router.delete("/:pid", (req, res) => {
   const productId = parseInt(req.params.pid);
   products = products.filter((product) => product.id !== productId);
+  saveProducts(products);
   res.status(200).json({
     message: `El producto (ID: ${productId}) se ha eliminado correctamente`,
   });

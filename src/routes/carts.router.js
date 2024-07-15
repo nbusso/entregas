@@ -8,7 +8,13 @@ let carts = setCarts();
 
 //get
 router.get("/", (req, res) => {
-  res.status(200).json(carts);
+  const limit = req.query.limit;
+
+  if (limit) {
+    res.status(200).json(carts.slice(0, limit));
+  } else {
+    res.status(200).json(carts);
+  }
 });
 
 router.get("/:cid", (req, res) => {
@@ -45,6 +51,7 @@ router.post("/", (req, res) => {
 router.delete("/:cid", (req, res) => {
   const cartId = parseInt(req.params.cid);
   carts = carts.filter((cart) => cart.id !== cartId);
+  saveCarts(carts);
   res.status(200).json({
     message: `Carrito con id: ${cartId}, se ha eliminado correctamente!`,
   });
