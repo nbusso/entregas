@@ -1,22 +1,23 @@
-const fs = require("fs");
-const path = require("path");
+import { existsSync, writeFileSync, readFileSync } from "fs";
+import { join } from "path";
+import __dirname from "./dirname.js";
 
-const cartsPath = path.join(__dirname, "../data/carts.json");
+const cartsPath = join(__dirname, "../data/carts.json");
 
-const setCarts = () => {
-  if (!fs.existsSync(cartsPath)) {
-    fs.writeFileSync(cartsPath, JSON.stringify([]));
+export const setCarts = () => {
+  if (!existsSync(cartsPath)) {
+    writeFileSync(cartsPath, JSON.stringify([]));
   }
-  const data = fs.readFileSync(cartsPath, "utf8");
+  const data = readFileSync(cartsPath, "utf8");
   return JSON.parse(data);
 };
 
-const saveCarts = (carts) => {
+export const saveCarts = (carts) => {
   const data = JSON.stringify(carts, null, 2);
-  fs.writeFileSync(cartsPath, data);
+  writeFileSync(cartsPath, data);
 };
 
-module.exports = {
-  setCarts,
-  saveCarts,
-};
+// export default {
+//   setCarts,
+//   saveCarts,
+// };

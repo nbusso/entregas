@@ -1,6 +1,6 @@
-const express = require("express");
-const router = express.Router();
-const { setCarts, saveCarts } = require("../utils/cartUtils.js");
+import { Router } from "express";
+const router = Router();
+import { setCarts, saveCarts } from "../utils/cartUtils.js";
 
 setCarts();
 
@@ -94,4 +94,4 @@ router.delete("/:cid/product/:pid", (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;

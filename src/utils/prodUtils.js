@@ -1,24 +1,25 @@
-const fs = require("fs");
-const path = require("path");
+import { existsSync, writeFileSync, readFileSync } from "fs";
+import { join } from "path";
+import __dirname from "./dirname.js";
 
-const productsPath = path.join(__dirname, "../data/products.json");
+const productsPath = join(__dirname, "../data/products.json");
 
-const setProducts = () => {
-  if (!fs.existsSync(productsPath)) {
-    fs.writeFileSync(productsPath, JSON.stringify([]));
+export const setProducts = () => {
+  if (!existsSync(productsPath)) {
+    writeFileSync(productsPath, JSON.stringify([]));
   }
 
-  const data = fs.readFileSync(productsPath, "utf8");
+  const data = readFileSync(productsPath, "utf8");
 
   return JSON.parse(data);
 };
 
-const saveProducts = (products) => {
+export const saveProducts = (products) => {
   const data = JSON.stringify(products, null, 2);
-  fs.writeFileSync(productsPath, data);
+  writeFileSync(productsPath, data);
 };
 
-module.exports = {
-  setProducts,
-  saveProducts,
-};
+// export default {
+//   setProducts,
+//   saveProducts,
+// };
