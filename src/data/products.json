@@ -88,6 +88,17 @@
     "thumbnails": ""
   },
   {
+    "id": 9,
+    "title": "Mega Wash",
+    "description": "High efficiency detergent for large loads",
+    "code": "MW-808",
+    "price": 22,
+    "status": true,
+    "stock": 250,
+    "category": "Laundry",
+    "thumbnails": ""
+  },
+  {
     "id": 10,
     "title": "Bright Whites",
     "description": "Keeps whites bright and colors vibrant",
@@ -95,17 +106,6 @@
     "price": 11,
     "status": true,
     "stock": 850,
-    "category": "Laundry",
-    "thumbnails": ""
-  },
-  {
-    "id": 11,
-    "title": "Nuevo Producto de testeo",
-    "description": "testeo",
-    "code": "CNR-1",
-    "price": 10,
-    "status": true,
-    "stock": 1000,
     "category": "Laundry",
     "thumbnails": ""
   }

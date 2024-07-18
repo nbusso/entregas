@@ -2,9 +2,9 @@ import { Router } from "express";
 const router = Router();
 import { setCarts, saveCarts } from "../utils/cartUtils.js";
 
-setCarts();
+await setCarts();
 
-let carts = setCarts();
+let carts = await setCarts();
 
 //get
 router.get("/", (req, res) => {
