@@ -18,8 +18,3 @@ export const saveProducts = (products) => {
   const data = JSON.stringify(products, null, 2);
   writeFileSync(productsPath, data);
 };
-
-// export default {
-//   setProducts,
-//   saveProducts,
-// };

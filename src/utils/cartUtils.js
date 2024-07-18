@@ -16,8 +16,3 @@ export const saveCarts = (carts) => {
   const data = JSON.stringify(carts, null, 2);
   writeFileSync(cartsPath, data);
 };
-
-// export default {
-//   setCarts,
-//   saveCarts,
-// };
