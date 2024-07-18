@@ -1,8 +1,8 @@
 import { existsSync, writeFileSync, readFileSync } from "fs";
 import { join } from "path";
-import __dirname from "./dirname.js";
+import __dirname from "../dirname.js";
 
-const cartsPath = join(__dirname, "../data/carts.json");
+const cartsPath = join(__dirname, "./data/carts.json");
 
 export const setCarts = () => {
   if (!existsSync(cartsPath)) {

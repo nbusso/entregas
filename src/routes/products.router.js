@@ -13,7 +13,9 @@ router.get("/", (req, res) => {
   if (limit) {
     res.status(200).json(products.slice(0, limit));
   } else {
-    res.status(200).json(products);
+    res.render("home", { products });
+    // console.log({ products });
+    // res.status(200).json(products);
   }
 });
 
