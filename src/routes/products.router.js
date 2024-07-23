@@ -1,6 +1,7 @@
 import { Router } from "express";
-const router = Router();
 import { setProducts, saveProducts } from "../utils/prodUtils.js";
+
+const router = Router();
 
 await setProducts();
 
@@ -13,7 +14,7 @@ router.get("/", (req, res) => {
   if (limit) {
     res.status(200).json(products.slice(0, limit));
   } else {
-    res.render("home", { products });
+    res.status(200).json(products);
   }
 });
 

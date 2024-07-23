@@ -1,6 +1,6 @@
 import { promises as fs } from "fs";
 import { join } from "path";
-import __dirname from "../dirname.js";
+import __dirname from "../utils.js";
 
 const cartsPath = join(__dirname, "./data/carts.json");
 
