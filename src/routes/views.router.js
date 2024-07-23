@@ -1,25 +1,16 @@
 import { Router } from "express";
-import { setProducts, saveProducts } from "../utils/prodUtils.js";
-import { io } from "../app.js";
+import { setProducts } from "../utils/prodUtils.js";
 
 const router = Router();
 
-await setProducts();
-let products = await setProducts();
-
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
+  const products = await setProducts();
   res.render("home", { products });
 });
 
-router.get("/realtimeproducts", (req, res) => {
-  let testObj = {
-    test: "test",
-    number: 56,
-  };
-
-  io.emit("test", testObj);
-
-  res.render("realTimeProducts", products);
+router.get("/realtimeproducts", async (req, res) => {
+  const products = await setProducts();
+  res.render("realTimeProducts", { products });
 });
 
 export default router;

@@ -108,5 +108,13 @@
     "stock": 850,
     "category": "Laundry",
     "thumbnails": ""
+  },
+  {
+    "id": "11",
+    "title": "testing",
+    "description": "hello?",
+    "code": "1235",
+    "price": "1244",
+    "stock": "12"
   }
 ]
