@@ -26,7 +26,7 @@ export const setProducts = async () => {
 export const saveProducts = async (products) => {
   try {
     const data = JSON.stringify(products, null, 2);
-    await writeFile(productsPath, data);
+    await fs.writeFile(productsPath, data);
   } catch (error) {
     console.error("Error guardando el archivo del producto", error);
     throw error;
