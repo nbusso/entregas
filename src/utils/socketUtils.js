@@ -30,7 +30,7 @@ export const postProduct = (product) => {
       status: status ?? true,
       stock,
       category,
-      thumbnails,
+      thumbnails: thumbnails ?? "",
     };
 
     products.push(newProduct);
