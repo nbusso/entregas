@@ -1,9 +1,10 @@
 import { setProducts, saveProducts } from "../utils/prodUtils.js";
 import { io } from "../app.js";
-await setProducts();
-const products = await setProducts();
 
-export const postProduct = (product) => {
+await setProducts();
+let products = await setProducts();
+
+export const postProduct = async (product) => {
   const {
     title,
     description,
@@ -41,3 +42,34 @@ export const postProduct = (product) => {
     io.emit("productLoadError");
   }
 };
+
+export const deleteProduct = async (id) => {
+  const productId = id;
+  try {
+    products = products.filter((product) => product.id !== productId);
+    saveProducts(products);
+    io.emit("productDeleted", id);
+  } catch (error) {
+    io.emit("productDeleteError", id, error);
+  }
+};
+
+// export const deleteProduct = async (id) => {
+//   const productId = parseInt(id);
+//   try {
+//     products = products.filter((product) => product.id !== productId);
+//     saveProducts(products);
+//     io.emit("productDeleted", id);
+//   } catch (error) {
+//     io.emit("productDeleteError", error);
+//   }
+// };
+
+// router.delete("/:pid", (req, res) => {
+//   const productId = parseInt(req.params.pid);
+//   products = products.filter((product) => product.id !== productId);
+//   saveProducts(products);
+//   res.status(200).json({
+//     message: `El producto (ID: ${productId}) se ha eliminado correctamente`,
+//   });
+// });

@@ -23,6 +23,14 @@ socket.on("productLoadError", () => {
   console.log("Error cargando el producto, revisa los datos ingresados.");
 });
 
+socket.on("productDeleted", (id, error) => {
+  console.log(`Articulo ID: ${id} eliminado correctamente`);
+});
+
+socket.on("productDeleteError", (id, error) => {
+  console.log(`Sucedió un error al querer eliminar ID: ${id}`, error);
+});
+
 document
   .getElementById("productForm")
   .addEventListener("submit", function (event) {
@@ -51,6 +59,17 @@ function addProductToList(product) {
   listItem.innerHTML = `
       <strong>${product.title}</strong> - $${product.price}
       <p>${product.description}</p>
+      <button class="delete-btn" data-id="${product.id}">Eliminar</button>
     `;
+
+  const deleteBtn = listItem.querySelector(".delete-btn");
+  deleteBtn.addEventListener("click", () => {
+    // Emitir el ID del producto al servidor
+    socket.emit("deleteProduct", product.id);
+    console.log("click");
+    // Eliminar el elemento de la lista en el DOM
+    listItem.remove();
+  });
+
   productsList.appendChild(listItem);
 }

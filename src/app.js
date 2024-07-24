@@ -6,7 +6,7 @@ import cartsRouter from "./routes/carts.router.js";
 import viewsRouter from "./routes/views.router.js";
 import __dirname from "./utils.js";
 import { setProducts, saveProducts } from "./utils/prodUtils.js";
-import { postProduct } from "./utils/socketUtils.js";
+import { postProduct, deleteProduct } from "./utils/socketUtils.js";
 
 const app = express();
 const PORT = 8080;
@@ -37,9 +37,14 @@ io.on("connection", async (socket) => {
     socket.emit("initialData", products);
   });
 
-  socket.on("addProduct", async (product) => {
-    await postProduct(product);
+  socket.on("addProduct", (product) => {
+    postProduct(product);
     // io.emit("productAdded", product);
+  });
+
+  socket.on("deleteProduct", (id) => {
+    console.log("Peticion de delete", id);
+    deleteProduct(id);
   });
 });
 
