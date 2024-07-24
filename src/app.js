@@ -35,7 +35,15 @@ export const io = new Server(httpServer);
 io.on("connection", (socket) => {
   console.log("Usuario conectado.");
 
-  socket.on("disconnect", () => {
-    console.log("Usuario desconectado");
+  let products = await setProducts();
+
+  socket.on("requestInitialData", () => {
+    socket.emit("initialData", products);
+  });
+
+  socket.on("addProduct", async (product) => {
+    // products.push(product);
+    // await saveProducts(products);
+    io.emit("productAdded", product);
   });
 });
