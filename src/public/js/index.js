@@ -19,6 +19,10 @@ socket.on("productAdded", (product) => {
   addProductToList(product);
 });
 
+socket.on("productLoadError", () => {
+  console.log("Error cargando el producto, revisa los datos ingresados.");
+});
+
 document
   .getElementById("productForm")
   .addEventListener("submit", function (event) {

@@ -6,6 +6,7 @@ import cartsRouter from "./routes/carts.router.js";
 import viewsRouter from "./routes/views.router.js";
 import __dirname from "./utils.js";
 import { setProducts, saveProducts } from "./utils/prodUtils.js";
+import { postProduct } from "./utils/socketUtils.js";
 
 const app = express();
 const PORT = 8080;
@@ -37,9 +38,8 @@ io.on("connection", async (socket) => {
   });
 
   socket.on("addProduct", async (product) => {
-    // products.push(product);
-    // await saveProducts(products);
-    io.emit("productAdded", product);
+    await postProduct(product);
+    // io.emit("productAdded", product);
   });
 });
 

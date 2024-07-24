@@ -1,10 +1,19 @@
 import { setProducts, saveProducts } from "../utils/prodUtils.js";
-
+import { io } from "../app.js";
 await setProducts();
 const products = await setProducts();
 
-export const postProduct = (newProduct) => {
-  const product = newProduct;
+export const postProduct = (product) => {
+  const {
+    title,
+    description,
+    code,
+    price,
+    status,
+    stock,
+    category,
+    thumbnails,
+  } = product;
 
   let maxId = products.reduce(
     (max, product) => (product.id > max ? product.id : max),
@@ -26,8 +35,9 @@ export const postProduct = (newProduct) => {
 
     products.push(newProduct);
     saveProducts(products);
-    res.status(200).json(newProduct);
+    io.emit("productAdded", product);
   } else {
-    res.status(400).json({ message: "Te faltan datos de producto." });
+    console.log("error");
+    io.emit("productLoadError");
   }
 };
