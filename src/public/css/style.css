@@ -1,0 +1,20 @@
+#products {
+  list-style-type: none;
+  padding: 0;
+}
+
+#products li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#products li strong {
+  font-size: 1.1em;
+}
+
+#products li p {
+  margin: 5px 0 0;
+  color: #666;
+}

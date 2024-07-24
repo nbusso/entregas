@@ -10,14 +10,12 @@ socket.on("disconnect", () => {
 });
 
 socket.on("initialData", (products) => {
-  console.log("Initial products:", products);
-  // Update your UI with the initial products
+  console.log("Productos Iniciales:", products);
   updateProductList(products);
 });
 
 socket.on("productAdded", (product) => {
-  console.log("New product added:", product);
-  // Update your UI with the new product
+  console.log("Nuevo producto ingresado:", product);
   addProductToList(product);
 });
 
@@ -28,17 +26,15 @@ document
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
 
-    // Emitir los datos del formulario a través del socket
-    console.log("Sending new product:", data);
+    console.log("Enviando nuevo producto:", data);
     socket.emit("addProduct", data);
 
-    // Limpiar el formulario después de enviarlo
     event.target.reset();
   });
 
 function updateProductList(products) {
   const productsList = document.getElementById("products");
-  productsList.innerHTML = ""; // Clear existing list
+  productsList.innerHTML = ""; // Limpiar lista existente
 
   products.forEach((product) => {
     addProductToList(product);

@@ -37,8 +37,8 @@ io.on("connection", async (socket) => {
   });
 
   socket.on("addProduct", async (product) => {
-    products.push(product);
-    await saveProducts(products);
+    // products.push(product);
+    // await saveProducts(products);
     io.emit("productAdded", product);
   });
 });
