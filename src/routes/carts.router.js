@@ -57,7 +57,7 @@ router.delete("/:cid", (req, res) => {
   });
 });
 
-router.delete("/:cid/product/:pid", (req, res) => {
+router.put("/:cid/product/:pid", (req, res) => {
   const cartId = parseInt(req.params.cid);
   const productId = parseInt(req.params.pid);
   const cart = carts.find((cart) => cart.id === cartId);

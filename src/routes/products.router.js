@@ -31,7 +31,16 @@ router.get("/:pid", (req, res) => {
 
 // post
 router.post("/", (req, res) => {
-  const product = req.body;
+  const {
+    title,
+    description,
+    code,
+    price,
+    status,
+    stock,
+    category,
+    thumbnails,
+  } = req.body;
 
   let maxId = products.reduce(
     (max, product) => (product.id > max ? product.id : max),
